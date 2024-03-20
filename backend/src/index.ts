@@ -6,9 +6,17 @@ import userRoutes from './routes/users'
 import authRoutes from './routes/auth'
 import cookieParser from "cookie-parser";
 import path from 'path';
+import {v2 as cloudinary} from 'cloudinary' // v2 is a SDK
 
-mongoose
-    .connect(process.env.MONGODB_CONNECTION_STRING as string); // write this line on the top of index file as server will crash if it will not work
+
+cloudinary.config({
+    cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+    api_key: process.env.CLOUDINARY_API_KEY,
+    api_secret: process.env.CLOUDINARY_API_SECRET
+})
+
+
+mongoose.connect(process.env.MONGODB_CONNECTION_STRING as string); // write this line on the top of index file as server will crash if it will not work
 
 const app = express(); // creating an app 
 app.use(cookieParser()); // use cookie parser to parse or read the cookie
