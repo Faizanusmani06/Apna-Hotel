@@ -15,8 +15,8 @@ app.use(cookieParser()); // use cookie parser to parse or read the cookie
 app.use(express.json()); // body of Api will convert into json
 app.use(express.urlencoded({extended: true})); // for parsing the url(params etc)
 app.use(cors({
-    //origin: process.env.FRONTEND_URL, // server will accept request from this url
-    //credentials: true
+    origin: process.env.FRONTEND_URL, // server will accept request from this url
+    credentials: true
 })); // browser prevents frontend on backend run on different ports
 
 app.use(express.static(path.join("__dirname", "../../frontend/dist"))); // express can serve static assets 
