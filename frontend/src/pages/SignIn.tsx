@@ -18,7 +18,7 @@ const SignIn = () => {
             // 1. show the tost
             // 2. navigate to the home page
             queryClient.invalidateQueries("validateToken") // forcefully validate so that we don't need to refresh
-            showToast({message: "Sign in Successfull!", type: "SUCCESS"});
+            showToast({message: "Sign in Successful!", type: "SUCCESS"});
             navigate("/");
         },
         onError: (err: Error)=>{

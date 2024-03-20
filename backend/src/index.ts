@@ -5,8 +5,10 @@ import mongoose from 'mongoose';
 import userRoutes from './routes/users'
 import authRoutes from './routes/auth'
 import cookieParser from "cookie-parser";
+import path from 'path';
 
-mongoose.connect(process.env.MONGODB_CONNECTION_STRING as string); // write this line on the top of index file as server will crash if it will not work
+mongoose
+    .connect(process.env.MONGODB_CONNECTION_STRING as string); // write this line on the top of index file as server will crash if it will not work
 
 const app = express(); // creating an app 
 app.use(cookieParser()); // use cookie parser to parse or read the cookie
@@ -17,6 +19,7 @@ app.use(cors({
     credentials: true
 })); // browser prevents frontend on backend run on different ports
 
+app.use(express.static(path.join("__dirname", "../../frontend/dist"))); // express can serve static assets 
 app.use("/api/auth", authRoutes)
 app.use("/api/users", userRoutes);
 
