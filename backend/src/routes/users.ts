@@ -33,8 +33,8 @@ router.post("/register", [
             }
         )
 
-        res.cookie("auth token", token, { // name, token
-            httpOnly: true, // can only be access on the server
+        res.cookie("auth_token", token, { // name, token
+            httpOnly: true, // can only be access on the server (you can access from the js code on the browser)
             secure: process.env.NODE_ENV === "production", //accept cookies only on https(useful in production)
             maxAge : 86400000,
         })
