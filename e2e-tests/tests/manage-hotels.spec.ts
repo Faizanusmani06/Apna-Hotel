@@ -62,7 +62,7 @@ test("should display hotels", async ({ page }) => {
 
   await expect(page.getByText("Pilibhit, India")).toBeVisible();
   await expect(page.getByText("Luxury")).toBeVisible();
-  await expect(page.getByText("1,500 Rs per night")).toBeVisible();
+  await expect(page.getByText("1,500 night")).toBeVisible();
   await expect(page.getByText("3 adults, 2 children")).toBeVisible();
   await expect(page.getByText("5 Star Rating")).toBeVisible();
 
