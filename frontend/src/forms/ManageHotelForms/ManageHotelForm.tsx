@@ -80,7 +80,7 @@ const ManageHotelForm = ({ onSave, isLoading, hotel }: Props) => {
           <button
             disabled={isLoading} // cant't submit the form while previous request is taking time
             type="submit"
-            className="bg-[#33b249] text-white p-2 font-bold hover:bg-[#33c651] text-xl disabled:bg-gray-500"
+            className="bg-[#33b249] text-[#F9F9F8] p-2 font-bold hover:bg-[#33c651] text-xl disabled:bg-gray-500"
           >
             {isLoading ? "Saving..." : "Save"}
           </button>

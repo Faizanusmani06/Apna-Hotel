@@ -58,7 +58,7 @@ const SearchResultsCard = ({ hotel }: Props) => {
 
             <Link
               to={`/detail/${hotel._id}`}
-              className="bg-[#33b249] text-white h-full p-2 font-bold text-xl max-w-fit hover:bg-[#33c651]"
+              className="bg-[#33b249] text-[#F9F9F8] h-full p-2 font-bold text-xl max-w-fit hover:bg-[#33c651]"
             >
               View More
             </Link>

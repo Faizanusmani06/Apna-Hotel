@@ -39,7 +39,6 @@ test("should allow user add a hotel", async ({ page }) => {
   await page.setInputFiles('[name="imageFiles"]', [
     path.join(__dirname, "files", "1.jpg"),
     path.join(__dirname, "files", "2.jpg"),
-    path.join(__dirname, "files", "3.jpg"),
   ]);
 
   await page.getByRole("button", { name: "Save" }).click();

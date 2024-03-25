@@ -2,7 +2,7 @@ import { useForm } from "react-hook-form";
 import { useMutation, useQueryClient } from "react-query";
 import * as apiClient from "../api-client";
 import { useAppContext } from "../contexts/AppContext";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 export type SignInFormData = {
   email: string;
   password: string;
@@ -11,6 +11,7 @@ export type SignInFormData = {
 const SignIn = () => {
   const { showToast } = useAppContext();
   const navigate = useNavigate();
+  const location = useLocation();
   const {
     register,
     formState: { errors },
@@ -23,7 +24,7 @@ const SignIn = () => {
       // 2. navigate to the home page
       queryClient.invalidateQueries("validateToken"); // forcefully validate so that we don't need to refresh
       showToast({ message: "Sign in Successful!", type: "SUCCESS" });
-      navigate("/");
+      navigate(location.state?.from?.pathname || "/");
     },
     onError: (err: Error) => {
       //1. toast
@@ -75,7 +76,7 @@ const SignIn = () => {
         </span>
         <button
           type="submit"
-          className="bg-[#33b249] text-white p-2 font-bold hover:bg-[#33c651] text-xl"
+          className="bg-[#33b249] text-[#F9F9F8] p-2 font-bold hover:bg-[#33c651] text-xl"
         >
           Login
         </button>
