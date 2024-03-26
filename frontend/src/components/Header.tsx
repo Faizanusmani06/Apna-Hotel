@@ -7,7 +7,7 @@ const Header = () => {
     <div className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 py-6 -m-1">
       <div className="container mx-auto flex justify-between">
         <span className="flex items-center gap-3 text-3xl text-[#F9F9F8] font-bold tracking-tight px-1 shadow-md">
-          <img src="hotel.png" alt="logo" className = "h-[40px]"/><Link to="/" className="">Apna Hotel</Link>
+          <img src="/hotel.png" alt="logo" className = "h-[40px]"/><Link to="/" className="">Apna Hotel</Link>
         </span>
         <span className="flex space-x-2">
           {isLoggedIn ? (
