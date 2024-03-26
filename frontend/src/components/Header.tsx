@@ -6,10 +6,13 @@ const Header = () => {
   return (
     <div className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 py-6 -mb-1 overflow-x-clip">
       <div className="p-5 md:container mx-auto flex justify-between">
-        <span className="flex items-center gap-3 text-3xl text-[#F9F9F8] font-bold tracking-tight px-1 shadow-md">
-          <img src="/hotel.png" alt="logo" className = "h-[40px]"/><Link to="/" className="">Apna Hotel</Link>
+        <span className="text-2xl md:text-3xl text-[#F9F9F8] font-bold tracking-tight mr-5 md:px-1 md:shadow-md ">
+          <Link to="/" className="flex gap-0 md:gap-3 ">
+            <img src="/hotel.png" alt="logo" className = "h-[80px] md:h-[60px] lg:h-[40px] object-cover"/>
+            <p className="text-white hidden md:block">Apna Hotel</p>
+          </Link>
         </span>
-        <span className="flex space-x-2">
+        <span className="flex md:space-x-2">
           {isLoggedIn ? (
             <>
               <Link
