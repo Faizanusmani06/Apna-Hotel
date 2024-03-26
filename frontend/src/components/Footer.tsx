@@ -10,8 +10,8 @@ const Footer = () => {
           Developed by <a href="https://github.com/Faizanusmani06">Moh Faizan</a>
         </div>
         </span>
-        <span className="text-[#F9F9F8] font-bold tracking-tight flex flex-col md:flex-row gap-4">
-          <p className="cursor-pointer">Privacy Policy</p>
+        <span className="text-[#F9F9F8] font-bold tracking-tight flex flex-col md:flex-row gap-2 md:gap-4">
+          <p className="cursor-pointer text-center">Privacy Policy</p>
           <p className="cursor-pointer">Terms of service</p>
         </span>
       </div>
