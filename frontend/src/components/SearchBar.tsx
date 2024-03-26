@@ -104,7 +104,7 @@ const SearchBar = () => {
           wrapperClassName="min-w-full"
         />
       </div>
-      <div>
+      <div className="overflow-clip">
         <DatePicker
           selected={checkOut}
           onChange={(date) => setCheckOut(date as Date)}
