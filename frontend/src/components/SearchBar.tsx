@@ -26,9 +26,31 @@ const SearchBar = () => {
     );
     navigate("/search");
   };
+
+  
   const minDate = new Date();
   const maxDate = new Date();
   maxDate.setFullYear(maxDate.getFullYear() + 1);
+
+
+
+  // const clearSearch = () => {
+  //   setDestination("");
+  //   setCheckIn(minDate);
+  //   setCheckOut(minDate);
+  //   setAdultCount(1);
+  //   setChildCount(1);
+  //   search.saveSearchValues(
+  //     destination,
+  //     checkIn,
+  //     checkOut,
+  //     adultCount,
+  //     childCount
+  //   );
+  //   navigate("/search");
+  // }
+
+
   return (
     <form
       onSubmit={handleSubmit}
@@ -78,7 +100,7 @@ const SearchBar = () => {
           minDate={minDate}
           maxDate={maxDate}
           placeholderText="Check-in Date"
-          className="min-w-full bg-[#F9F9F8] p-2 focus:outline-none"
+          className="min-w-full bg-[#F9F9F8] p-2 focus:outline-none "
           wrapperClassName="min-w-full"
         />
       </div>
@@ -97,12 +119,12 @@ const SearchBar = () => {
         />
       </div>
       <div className="flex gap-1">
-        <button className="w-2/3 bg-[#33b249] text-[#F9F9F8] h-full p-2 font-bold text-xl hover:bg-[#33c651]">
+        <button type="submit" className="w-full bg-[#33b249] text-[#F9F9F8] h-full p-2 font-bold text-xl hover:bg-[#33c651]">
           Search
         </button>
-        <button className="w-1/3 bg-red-600 text-[#F9F9F8] h-full p-2 font-bold text-xl hover:bg-red-500">
+        {/* <button onClick = {clearSearch} className="w-1/2 md:w-1/3 bg-red-600 text-[#F9F9F8] h-full p-2 font-bold text-xl hover:bg-red-500">
           Clear
-        </button>
+        </button> */}
       </div>
     </form>
   );

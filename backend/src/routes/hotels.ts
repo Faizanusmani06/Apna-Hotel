@@ -98,7 +98,10 @@ router.post(
       return res.status(400).json({ message: "Hotel not found" });
     }
 
-    const totalCost = hotel.pricePerNight * numberOfNights;
+    let totalCost = hotel.pricePerNight * numberOfNights;
+    if(!numberOfNights) {
+      totalCost = hotel.pricePerNight;
+    }
 
     const paymentIntent = await stripe.paymentIntents.create({
       amount: totalCost * 100,

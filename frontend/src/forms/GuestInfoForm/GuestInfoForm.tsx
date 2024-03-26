@@ -68,7 +68,7 @@ const GuestInfoForm = ({ hotelId, pricePerNight }: Props) => {
 
   return (
     <div className="flex flex-col p-4 bg-slate-300 gap-4 rounded-sm">
-      <h3 className="text-md font-bold">&#8377;{pricePerNight.toLocaleString()}</h3>
+      <h3 className="text-md font-bold">&#8377;{pricePerNight.toLocaleString()}/night</h3>
       <form
         onSubmit={
           isLoggedIn ? handleSubmit(onSubmit) : handleSubmit(onSignInClick)
