@@ -16,6 +16,18 @@ git clone https://github.com/faizanusmani06/Apna-Hotel.git
 cd Apna-Hotel
 ```
 
+## Snapshots
+<img src = "https://res.cloudinary.com/dooi3sikb/image/upload/v1711479300/Apna%20Hotel/jqymyk78wjnpxrpgxdka.png">
+<img src = "https://res.cloudinary.com/dooi3sikb/image/upload/v1711479299/Apna%20Hotel/us7n2a6xuogsitepsyut.png">
+<img src = "https://res.cloudinary.com/dooi3sikb/image/upload/v1711479299/Apna%20Hotel/liejjblk46bilulogchm.png">
+<img src = "https://res.cloudinary.com/dooi3sikb/image/upload/v1711479300/Apna%20Hotel/tpz0pxvioj5bqme7yzwf.png">
+<img src = "https://res.cloudinary.com/dooi3sikb/image/upload/v1711479300/Apna%20Hotel/nhdkyhoe1o0hteb9slo4.png">
+<img src = "https://res.cloudinary.com/dooi3sikb/image/upload/v1711479300/Apna%20Hotel/o0ixulhid7ysigbt0mbb.png">
+<img src = "https://res.cloudinary.com/dooi3sikb/image/upload/v1711479300/Apna%20Hotel/zlcthhdrkojghstjqpwf.png">
+<img src = "https://res.cloudinary.com/dooi3sikb/image/upload/v1711479301/Apna%20Hotel/rmu4ilg5lr6dcsp3anjf.png">
+<img src = "https://res.cloudinary.com/dooi3sikb/image/upload/v1711479299/Apna%20Hotel/npxvbtpeozqihbt6t6dj.png">
+<img src = "https://res.cloudinary.com/dooi3sikb/image/upload/v1711479299/Apna%20Hotel/qzsxtlajep7vvvdttxlq.png" style = "width:100%;">
+
 ## Backend Configuration
 
 1. **Environment Files**: Navigate to the `backend` folder and create two files: `.env` and `.env.e2e`. Add the following contents to both files:
