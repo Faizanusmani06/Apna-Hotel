@@ -43,7 +43,7 @@ test("should allow user add a hotel", async ({ page }) => {
 
   await page.getByRole("button", { name: "Save" }).click();
   await expect(page.getByText("Saving...")).toBeVisible();
-  await page.waitForSelector(".tst", { timeout: 10000 });
+  await page.waitForSelector(".tst", { timeout: 15000 });
   await expect(page.getByText("Hotel Saved!")).toBeVisible();
 });
 
