@@ -69,6 +69,6 @@ test.beforeEach(async ({ page }) => {
     await page.waitForSelector(".tst", { timeout: 15000 });
     await expect(page.getByText("Booking Saved!")).toBeVisible();
   
-    // await page.getByRole("link", { name: "My Bookings" }).click();
-    // await expect(page.getByText("Dublin Getaways")).toBeVisible();
+    await page.getByRole("link", { name: "My Bookings" }).click();
+    await expect(page.getByText("The Royal Oasis Hotel")).toBeVisible();
   });
